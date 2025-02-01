@@ -90,6 +90,7 @@ div{
 
 #formDiv, #listDiv{
     width: 70%;
+    max-width: 100%;
     border: 3px solid rgba(103, 51, 2, 0.5);
     display: block;
     box-shadow: -5px 5px 10px rgb(2, 0, 24);
@@ -102,32 +103,73 @@ div{
     background: transparent;
     margin: auto;
 }
+
+
+/*YOUR LIST*/
+#yourList{
+    margin: auto; 
+    text-align: center;
+    grid-column: span 2;
+    grid-row: 1;
+}
 #listDiv{
     margin: 10px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1 1 1 1;
+    gap: 10px;
     
 }
 #listHeaders{
     margin: auto;
-    text-align: center;
     display: block;
 }
-
-/*YOUR LIST*/
 #itemDiv, #quantityDiv, #costDiv, #calculationsDiv{
     background: transparent;
     margin: auto;
 }
+#itemDiv, #quantityDiv, #costDiv{
+    justify-items: center;
+    align-items: center;
+}
 #itemDiv{
-    width: 60%;
+    width: 90%;
+    grid-column: 1;
+    grid-row: 2;
+    margin: auto;
+}
+#listItems{
+    font-family: 'Indie Flower';
 }
 #quantityDiv{
-    width: 25%;
+    width: 90%;
+    grid-column: 2;
+    grid-row: 2;
+    margin: auto;
 }
 #costDiv{
-    width: 85%;
+    width: 90%;
+    grid-column: 1;
+    grid-row: 3;
 }
 #calculationsDiv{
     width: 85%;
+    grid-column: 2;
+    grid-row: 3;
+    text-align: left;
+}
+#edit, #delete{
+    margin: 0 5px;
+}
+#listButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    background: transparent;
+    grid-column: span 2;
+    grid-row: 4;
 }
 
 /*EDIT*/
@@ -146,10 +188,17 @@ div{
 #newValuesDiv, #listEditor, #listEditorDiv{
     display: none;
 }
+#editButtons{
+    background: transparent;
+}
+#newValuesDiv{
+    background: transparent;
+}
 
 /*FIELDSET*/
 fieldset{
     border-radius: 25px;
+    max-width: 100%;
     width: 60%;
     margin: auto;
 }
@@ -266,9 +315,32 @@ footer{
     margin: auto;
 }
 
-@media (max-width: 1024px){/*split screen or smaller devices*/
-    fieldset{
-        width: 90%;
-        margin: auto;
+@media (max-width: 1024px) {
+    fieldset {
+        width: 90%; 
+    }
+    #formDiv, #listDiv {
+        width: 90%; 
+    }
+    #listEditorDiv{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 2;
+        gap: 10;
+    }
+    #tooltipEdit{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #editItem{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    #editButtons{
+        grid-row: 2;
+        grid-column: span 2;
+        justify-items: center;
+        align-items: center;
+        background: transparent;
     }
 }

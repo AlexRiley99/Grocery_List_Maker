@@ -74,7 +74,6 @@ function budgetOverUnder(){ //Displays a message if the user is over, under, or 
 function addToList(){ //Adds an item to the list
     var budgetValue = parseFloat(budgetAmount.value);
     var runningTotal = calculateRunningTotal();
-    var budgetCheck = document.getElementById('budgetCheck');
     var item = itemName.value;
     var quantity = itemQuantity.value;
     var cost = itemCost.value;
@@ -105,20 +104,6 @@ function addToList(){ //Adds an item to the list
         else if(item.trim() == '' || quantity.trim() == '' || cost.trim() == ''){
             alert ('One or more fields are empty! Please enter a value.');
         }
-        else if(budgetCheck.checked && runningTotal + parseFloat(cost) > budgetValue){ //See if budgetCheck is checked
-                //Clear input fields
-                itemName.value = '';
-                itemQuantity.value = '';
-                itemCost.value = '';
-    
-                //Remove the last elements from the arrays to prevent them from saving
-                itemArray.pop();
-                quantArray.pop();
-                costArray.pop();
-    
-                //Throw alert if over budget
-                alert('Over budget!');
-        }
         else{
             itemArray.push(item); 
             itemName.value = ''; 
@@ -133,7 +118,6 @@ function addToList(){ //Adds an item to the list
         //clear the fields
     }
 }
-budgetCheck.addEventListener('change', addToList);
 
 
 function displayList(){
@@ -141,7 +125,7 @@ function displayList(){
     var itemCount = 1;
     var listHTML = '<ul>';
     for (var i = 0; i < itemArray.length; i++){
-        listHTML += '<h4>' + itemCount + "." + itemArray[i] + '</h4>';
+        listHTML += '<h4>' + itemCount + ". " + itemArray[i] + '</h4>';
         itemCount++;
     }
     listHTML += '</ul>'

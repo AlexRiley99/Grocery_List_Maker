@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Make A Grocery List</title>
         <link rel="stylesheet" href="Make A Grocery List.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
         <script src="Make A Grocery List.js"></script>
     </head>
     <body>
@@ -47,7 +50,6 @@
                 <fieldset id="budgetInfo">
                     <legend>Set Your Budget</legend>
                     <label for="budgetAmount">Budget Amount: $ </label><input type="text" id="budgetAmount" placeholder="Ex: 200">
-                    <h5 id="alertMe">Alert Me If I Go Over Budget <input type="checkbox" id="budgetCheck"></h5>
                 </fieldset>
                 <input type="button" value="Set Budget" id="setBudget" class="button"><input type="reset" value="Clear" id="budgetClear" class="button">
                 <fieldset id="listInfo">
@@ -62,7 +64,7 @@
             </form>
         </div>
         <div id="listDiv">
-            <h2 style="margin: auto; text-align: center;">Your List</h2>
+            <h2 id="yourList">Your List</h2>
                 <div id="itemDiv" class="listColumn">
                 <h3 id="itemHeader" class="listHeader">Item</h3>
                 <h4 id="listItems"></h4>
@@ -80,8 +82,11 @@
             <h4 class="calcLabels">Difference: </h4><h4 id="difference" class="calcValues"></h4><br>
             <h4 id="overUnder"></h4>
             </div>
-            <input type="button" value="Edit" class="button" id="edit"><input type="button" value="Delete" class="button" id="delete">
+            <div id="listButtons">
+                <input type="button" value="Edit" class="button" id="edit"><input type="button" value="Delete" class="button" id="delete">
+            </div>
         </div>
+
         <div id=listEditorDiv><div id="tooltipEdit" class="makeList" aria-label="More Info">&#x2753;
             <span class="tooltipText">
                 <h3 style="text-decoration: underline; text-align: center;">Tips:</h3>
@@ -93,8 +98,10 @@
                     </ul>
                 </span>
             </div>
-        <label for=itemToEdit>Which item do you want to edit?: Item # <input type=text class=editList id=editItem>
-        <input type=button value=Confirm id=confirmEdit class=button><input type="button" value="Close" id="cancelEdit" class="button">
+        <label for=editItem>Which item do you want to edit?: Item # <input type=text class=editList id=editItem>
+            <div id="editButtons">
+                <input type=button value=Confirm id=confirmEdit class=button><input type="button" value="Close" id="cancelEdit" class="button">
+            </div>
             <div id="listEditor">
                 <label for="currentItem">Current Item: <h4 id="currentItem"></h4></label>
                 <label for="currentQuantity">Current Quantity: <h4 id="currentQuantity"></h4></label>
