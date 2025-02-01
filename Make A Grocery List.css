@@ -1,0 +1,274 @@
+/*WHOLE PAGE*/
+:root{
+    --button: rgb(47, 21, 1);
+    --hover: rgb(111, 49, 2);
+    --active: rgb(172, 78, 7);
+}
+html{
+    /*fallback color*/
+    background-color: darkolivegreen;
+    /*image*/
+    background-image: url("Images/Grocery.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Garamond;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/*TOOLTIP*/
+#tooltip, #tooltipEdit{
+    display: inline-block;
+    box-shadow: 0px 5px 10px rgb(2, 0, 24);
+}
+#tooltipEdit{
+    margin: 5px 30px 5px 10px
+}
+#tooltip{
+    margin: 20px 0 0 100px;
+}
+
+#tooltipEdit .tooltipText, #tooltip .tooltipText{
+    visibility: hidden;
+    background-image: 
+        linear-gradient(to bottom right, 
+            rgba(58, 20, 1, 0.9), 
+            rgba(181, 119, 88, 0.7),
+            rgba(245, 222, 179, 0.5), 
+            rgba(245, 222, 179, 0.5), 
+            rgba(181, 119, 88, 0.7), 
+            rgba(58, 20, 1, 0.9)),
+                url('Images/paperTexture.jpg');
+    color: black;
+    border: 3px solid rgba(103, 51, 2, 0.5);
+    box-shadow: 0px 5px 10px rgb(2, 0, 24);
+    text-align: left;
+    padding: 10px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    font-family: serif;
+}
+
+#tooltip .tooltipText{
+    width: 500px;
+    height: 400px;
+}
+#tooltipEdit .tooltipText{
+    width: 300px;
+    height: 150px;
+}
+
+#tooltip:hover .tooltipText,
+#tooltip:focus .tooltipText, 
+#tooltipEdit:hover .tooltipText,
+#tooltipEdit:focus .tooltipText{
+    visibility: visible;
+}
+
+/*DIV*/
+div{
+    background-image: 
+        linear-gradient(to bottom right, 
+            rgba(58, 20, 1, 0.9), 
+            rgba(181, 119, 88, 0.7),
+            rgba(245, 222, 179, 0.5), 
+            rgba(245, 222, 179, 0.5), 
+            rgba(181, 119, 88, 0.7), 
+            rgba(58, 20, 1, 0.9)),
+                url('Images/paperTexture.jpg');
+    border-radius: 25px;
+    padding: 10px;
+}
+
+#formDiv, #listDiv{
+    width: 70%;
+    border: 3px solid rgba(103, 51, 2, 0.5);
+    display: block;
+    box-shadow: -5px 5px 10px rgb(2, 0, 24);
+    text-align: center;
+}
+#formDiv{
+    margin: 20px auto 10px auto;
+}
+#buttonDiv{
+    background: transparent;
+    margin: auto;
+}
+#listDiv{
+    margin: 10px auto;
+    
+}
+#listHeaders{
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+
+/*YOUR LIST*/
+#itemDiv, #quantityDiv, #costDiv, #calculationsDiv{
+    background: transparent;
+    margin: auto;
+}
+#itemDiv{
+    width: 60%;
+}
+#quantityDiv{
+    width: 25%;
+}
+#costDiv{
+    width: 85%;
+}
+#calculationsDiv{
+    width: 85%;
+}
+
+/*EDIT*/
+#listEditorDiv{
+    margin: 10px auto;
+    border: 3px solid rosyBrown;
+    display: block;
+    width: 70%;
+    box-shadow: -5px 5px 10px rgb(2, 0, 24);
+    text-align: center;
+}
+#listEditor{
+    border: 1px solid black;
+    margin: 5px;
+}
+#newValuesDiv, #listEditor, #listEditorDiv{
+    display: none;
+}
+
+/*FIELDSET*/
+fieldset{
+    border-radius: 25px;
+    width: 60%;
+    margin: auto;
+}
+legend{
+    text-align: center;
+    font-weight: bold;
+}
+#listInfo{
+    margin: auto;
+    width: 60%
+}
+
+/*BUTTONS*/
+.button{
+    color: white;
+    background-color: var(--button);
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+    margin: 3px;
+    padding: 5px;
+    width: 100px;
+    height: 30px;
+    font-family: serif;
+    box-shadow: -3px 3px 10px rgb(17, 7, 0);
+    transition: background-color 0.5s ease;
+}
+.button:hover{
+    background-color: var(--hover);
+}
+.button:active{
+    background-color: var(--active);
+}
+
+/*INPUTS*/
+#budgetCheck, #budgetAmount, .makeList{
+    display: inline-block;
+}
+
+#budgetAmount{
+    margin: 5px auto 20px auto;
+    width: 100px;
+}
+
+.makeList{
+    text-align: center;
+}
+
+#itemName{
+    margin-bottom: 5px;
+    width: 500px;
+}
+#itemQuantity{
+    margin-bottom: 5px;
+    width: 100px;
+}
+#itemCost{
+    margin: 5;
+    width: 100px;
+}
+#editItem{
+    width: 50px;
+}
+.newList{
+    margin: 5px auto;
+}
+
+/*OUTPUTS*/
+.calcValues, .calcLabels{
+    display: inline;
+}
+
+.overUnderOutput{
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
+}
+#underBudget, #onBudget{
+    color: green;
+}
+#overBudget{
+    color: red;
+}
+
+/*LIST FORMATTING*/
+.listColumn{
+    display: inline-block;
+    border: 1px solid rgba(103, 51, 2, 0.5);
+    color: black;
+}
+.listHeader{
+    text-decoration: underline;
+    text-align: center;
+}
+
+#listQuantity{
+    width: 15%;
+    text-align: left;
+}
+
+#listItems{
+    text-align: left;
+}
+
+#listCosts{
+    text-align: left;
+}
+
+/*FOOTER*/
+footer{
+    color: white;
+    text-shadow: 3px 1px 1px black;
+    text-align: center;
+    margin: auto;
+}
+
+@media (max-width: 1024px){/*split screen or smaller devices*/
+    fieldset{
+        width: 90%;
+        margin: auto;
+    }
+}
