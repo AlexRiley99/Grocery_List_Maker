@@ -62,6 +62,7 @@
 ## Future Changes
 -  I plan to add a feature that allows the user to save their grocery list to their local device
 -  I will add a feature that calculates tax by having the user enter the tax amount for their state and factoring it into calculations
+-  I'll be adding media queries to better optimize the application for smaller screens
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Credits
 #### Alex Riley
