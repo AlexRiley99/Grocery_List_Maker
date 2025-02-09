@@ -308,13 +308,13 @@ legend{
 }
 
 /*FOOTER*/
-#footerDiv{
+footer{
     color: white;
     text-shadow: 3px 1px 1px black;
     text-align: center;
     margin: auto;
 }
-#footerDiv a{
+footer a{
     color: white;
     text-shadow: 3px 1px 1px black;
     text-decoration: none;
