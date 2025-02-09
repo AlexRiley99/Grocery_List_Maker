@@ -308,11 +308,16 @@ legend{
 }
 
 /*FOOTER*/
-footer{
+#footerDiv{
     color: white;
     text-shadow: 3px 1px 1px black;
     text-align: center;
     margin: auto;
+}
+#footerDiv a{
+    color: white;
+    text-shadow: 3px 1px 1px black;
+    text-decoration: none;
 }
 
 @media (max-width: 1024px) {
