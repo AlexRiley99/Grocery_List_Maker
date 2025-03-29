@@ -1,9 +1,11 @@
 <!DOCTYPE html >
 <html lang="en">
     <head>
+        <!--Metas-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Make A Grocery List</title>
+        <!--Links-->
         <link rel="stylesheet" href="Make A Grocery List.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,9 +14,11 @@
     </head>
     <body>
         <header>
+            <!--HEADER-->
             <h1>Make A Grocery List!</h1><div id="tooltip" class="makeList" aria-label="More Info">&#x2753;
                 <span class="tooltipText">
-                    <h3 style="text-decoration: underline; text-align: center;">Instructions:</h3>
+                    <!--TOOLTIP TEXT-->
+                    <p style="text-decoration: underline; text-align: center;">Instructions:</p>
                     <ol>
                         <li>Enter your budget amount and press "Set Budget". 
                             This number will display under "Your List"</li>
@@ -45,14 +49,17 @@
             </div>
         </header>
 
+        <section>
         <div id="formDiv">
             <form>
+                <!--BUDGET-->
                 <fieldset id="budgetInfo">
                     <legend>Set Your Budget</legend>
                     <label for="budgetAmount">Budget Amount: $ </label><input type="text" id="budgetAmount" placeholder="Ex: 200">
                 </fieldset>
                 <input type="button" value="Set Budget" id="setBudget" class="button"><input type="reset" value="Clear" id="budgetClear" class="button">
                 <fieldset id="listInfo">
+                    <!--LIST MAKING-->
                     <legend>Make Your List</legend>
                     <label for="itemName">Item: </label><input type="text" id="itemName" class="makeList" placeholder="Ex: Apples" max-lengt=30><br>
                     <label for="itemQuantity">Quantity: </label><input type="text" id="itemQuantity" class="makeList" placeholder="Ex: 5"><br>
@@ -63,32 +70,37 @@
                 </div>
             </form>
         </div>
+    </section>
+    <section>
         <div id="listDiv">
+            <!--LIST DISPLAY-->
             <h2 id="yourList">Your List</h2>
                 <div id="itemDiv" class="listColumn">
                 <h3 id="itemHeader" class="listHeader">Item</h3>
-                <h4 id="listItems"></h4>
+                <p id="listItems"></p>
             </div><div id="quantityDiv" class="listColumn">
                 <h3 id="quantityHeader" class="listHeader">Quantity</h3>
-                <h4 id="listQuantities"></h4>
+                <p id="listQuantities"></p>
             </div><div id="costDiv" class="listColumn">
                 <h3 id="costHeader" class="listHeader">Cost</h3>
-                <h4 id="listCosts"></h4>
+                <p id="listCosts"></p>
             </div>
 
             <div id="calculationsDiv">
-            <h4 class="calcLabels">Total: </h4><h4 id="total" class="calcValues"></h4><br>
-            <h4 class="calcLabels">Budget: </h4><h4 id="budget" class="calcValues"></h4><br>
-            <h4 class="calcLabels">Difference: </h4><h4 id="difference" class="calcValues"></h4><br>
-            <h4 id="overUnder"></h4>
+            <p class="calcLabels">Total: </p><p id="total" class="calcValues"></p><br>
+            <p class="calcLabels">Budget: </p><p id="budget" class="calcValues"></p><br>
+            <p class="calcLabels">Difference: </p><p id="difference" class="calcValues"></p><br>
+            <p id="overUnder"></p>
             </div>
             <div id="listButtons">
                 <input type="button" value="Edit" class="button" id="edit"><input type="button" value="Delete" class="button" id="delete">
             </div>
         </div>
-
+    </section>
+    <section>
         <div id=listEditorDiv><div id="tooltipEdit" class="makeList" aria-label="More Info">&#x2753;
             <span class="tooltipText">
+                <!--EDITOR TOOLTIP-->
                 <h3 style="text-decoration: underline; text-align: center;">Tips:</h3>
                     <ul>
                         <li>If you're unsure about the item number, you can reference
@@ -98,14 +110,15 @@
                     </ul>
                 </span>
             </div>
+            <!--EDITOR-->
         <label for=editItem>Which item do you want to edit?: Item # <input type=text class=editList id=editItem>
             <div id="editButtons">
                 <input type=button value=Confirm id=confirmEdit class=button><input type="button" value="Close" id="cancelEdit" class="button">
             </div>
             <div id="listEditor">
-                <label for="currentItem">Current Item: <h4 id="currentItem"></h4></label>
-                <label for="currentQuantity">Current Quantity: <h4 id="currentQuantity"></h4></label>
-                <label for="currentCost">Current Cost: <h4 id="currentCost"></h4></label>
+                <label for="currentItem">Current Item: <p id="currentItem"></p></label>
+                <label for="currentQuantity">Current Quantity: <p id="currentQuantity"></p></label>
+                <label for="currentCost">Current Cost: <p id="currentCost"></p></label>
                 <input type="button" value="Replace" id="replace" class="button"><input type="button" value="Remove" id="remove" class="button">
             <div id="newValuesDiv">
                 <label for="newItem">New Item: <input type="text" id="newItem" class="newList"></label><br>
@@ -117,9 +130,10 @@
                 <input type="button" value="Done" id="finishEditing" class="button" style="display: none;"><input type="button" value="Edit Another" id="editAnother" class="button" style="display:none">
             </div>
         </div>
-
+    </section>
+        <!--FOOTER-->
         <footer>
-            <h6><a href="https://jupitertechstudio.com">Jupiter Tech Studio</a> | May 2024 | Last Updated: February 9, 2025</h6>
+            <p><a href="https://jupitertechstudio.com">Jupiter Tech Studio</a> | May 2024 | Last Updated: February 9, 2025</p>
         </footer>
     </body>
 </html>
