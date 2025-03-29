@@ -200,7 +200,7 @@ fieldset{
     border-radius: 25px;
     max-width: 100%;
     width: 60%;
-    margin: auto;
+    margin: 5px auto;
 }
 legend{
     text-align: center;
@@ -218,7 +218,7 @@ legend{
     text-align: center;
     display: inline-block;
     border-radius: 10px;
-    margin: 3px;
+    margin: 25px 3px;
     padding: 5px;
     width: 100px;
     height: 30px;
@@ -338,6 +338,9 @@ footer a{
     #tooltipEdit{
         grid-column: 1;
         grid-row: 1;
+        width: 20px;
+        border-radius: 50px;
+        height: 20px;
     }
     #editItem{
         grid-column: 2;
